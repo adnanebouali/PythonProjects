@@ -6,13 +6,13 @@ from git import Repo
 now = datetime.datetime.now()
 
 # Step 2: Write the date to the text file
-with open('D:\myfiles\DailyPush\Thefile.txt' , 'a') as file:
+with open('D:\myFiles\DailyPush\Thefile.txt' , 'a') as file:
     file.write(f"{now.strftime('%A')} // {now.strftime('%Y-%m-%d')} // {now.strftime('%H:%M:%S')} // {now.strftime('%j')} day of the year.\n")
 
 
 # Step 3: Use Git to commit and push the changes
 
-PATH_OF_GIT_REPO = r'D:\myfiles\DailyPush\.git' 
+PATH_OF_GIT_REPO = r'D:\myFiles\DailyPush' 
 COMMIT_MESSAGE = f"{now.strftime('%A')} // {now.strftime('%Y-%m-%d')}"
 
 def git_push():
